@@ -1,6 +1,6 @@
 <div id="publication" class="main_section publication">
      <h2>Publications</h2>
-	 {{ $entries := .Site.Params.publications }}
+	 {{ $entries := index . "entries" }}
 	 {{ range $entries }}
 	 <div class="publication_entry">
 		<p>{{ .author }}</p>

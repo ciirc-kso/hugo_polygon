@@ -1,13 +1,10 @@
 <div id="about" class="main_section about">
-     {{ $about := .Site.Params.about }}
-	 <div class="">
-		<p>{{ $about.title }}</p>
-		<p>{{ $about.description }}</p>
-		<p>[Keywords]</p>
-		<ul>
-			{{ range $about.keywords }}
-			<li>{{ . }}</li>
-			{{ end }}
-		</ul>
-	 </div>
+	<h2>{{ index . "title" }}</h2>
+	<p>{{ index . "description" }}</p>
+	<ul>
+		{{ $keywords := index . "keywords" }}
+		{{ range $keywords }}
+		<li>{{ . }}</li>
+		{{ end }}
+	</ul>
 </div>
