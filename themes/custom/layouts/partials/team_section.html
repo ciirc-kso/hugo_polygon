@@ -1,0 +1,10 @@
+<div id="team" class="main_section team">
+     {{ $members := .Site.Params.team }}
+	 {{ range $members }}
+		<div class="member_card">
+			<img src="{{ .avatar }}" height="100" width="100" />
+			<p class="name">{{ .name }}</p>
+			<p class="position">{{ .position }}</p>
+		</div>
+	 {{ end }}
+</div>

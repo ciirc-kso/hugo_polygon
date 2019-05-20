@@ -1,0 +1,11 @@
+<div id="publication" class="main_section publication">
+     <h2>Publications</h2>
+	 {{ $entries := .Site.Params.publications }}
+	 {{ range $entries }}
+	 <div class="publication_entry">
+		<p>{{ .author }}</p>
+		<p>{{ .email }}</p>
+		<p><a href="{{ .ref }}">Link to publication</a></p>
+	 </div>
+	 {{ end }}
+</div>

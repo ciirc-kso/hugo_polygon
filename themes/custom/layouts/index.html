@@ -1,0 +1,22 @@
+{{define "main"}}
+
+{{ if isset .Site.Params "proposal" }}
+	{{ partial "research_proposal_section.html" .}}
+{{ end }}
+
+{{ if isset .Site.Params "about" }}
+	{{ partial "about_section.html" .}}
+{{ end }}
+
+{{ if isset .Site.Params "team" }}
+	{{ partial "team_section.html" .}}
+{{ end }}
+
+{{ if isset .Site.Params "publications" }}
+	{{ partial "publication_section.html" . }}
+{{ end }}
+
+{{ if isset .Site.Params "contact" }}
+	{{ partial "contact_section.html" .}}
+{{ end }}
+{{end}}

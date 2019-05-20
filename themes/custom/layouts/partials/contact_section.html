@@ -1,0 +1,19 @@
+<div id="contact" class="main_section contact">
+	{{ $contact := .Site.Params.contact }}
+    <h2>Contact</h2>
+	<ul>
+		<li>{{ $contact.email }}</li>
+		<li>{{ $contact.phone }}</li>
+		<li>{{ $contact.location }}</li>
+		<li>{{ $contact.email }}</li>
+	</ul>
+	<div class="shortcode shortcode--google-maps">
+		<iframe
+			src='https://www.google.com/maps/embed/v1/place?key={{ .Site.Params.googleMapsAPIKey }}&q={{ $contact.location }}'
+			frameborder="0"
+			scrolling="no"
+			width="150px"
+			height="150px" >
+		</iframe>
+	</div>
+</div>

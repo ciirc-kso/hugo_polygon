@@ -1,0 +1,29 @@
+<div id="header">
+     <h1 style="margin-bottom:-10px; "><a style="text-decoration: none; color:white;"href="/"> Template - {{.Kind}}</a></h1>
+</div>
+<div id="navbar" class="topnav">
+	<a href="{{.URL}}#about">About</a>
+	<a href="{{.URL}}#proposal">Proposal</a>
+	<a href="{{.URL}}#publication">Publications</a>
+	<a href="{{.URL}}#team">Team</a>
+	<a href="{{.URL}}#contact">Contact</a>
+</div>
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+} 
+</script>

@@ -1,0 +1,12 @@
+{{ $title := .Get 0 }}
+{{ $description := .Get 1 }}
+{{ $keywords := split (.Get 2) "," }}
+<div id="about" class="main_section about">
+	<h2>{{ $title }}</h2>
+	<p>{{ $description }}</p>
+	<ul>
+	{{ range $keywords }}
+		<li>{{ . }}</li>
+	{{ end }}
+	</ul>
+</div>

@@ -1,0 +1,25 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "custom"
+
+[params]
+	
+	proposal = { title = "Test proposal", description = "Generic proposal for testing purposes. Science!", source = "Book ref", pdflink = "link_to_file" }
+	
+	about = { title = "About the project", description = "Lorem ipsum bla bla", keywords = ["Learning analytics", "Educating Data Mining", "Machine Learning"] }
+	
+	team = [
+		{ name = "Jakub Kuzilek", position = "junior researcher (PI)", avatar = "images/jakub_kuzilek_avatar.png" },
+		{ name = "Jonas Vaclavek", position = "PhD student", avatar = "images/jonas_vaclavek_avatar.jpeg" },
+		{ name = "Viktor Fuglik", position = "postdoctoral researcher", avatar = "images/viktor_fuglik_avatar.jpg" }
+	]
+	
+	publications = [
+		{author = "Jakub Kuzilek", email = "jakub.kuzilek@cvut.cz", ref = "link1"},
+		{author = "Jonas Vaclavek", email = "jonas.vaclavek@cvut.cz", ref = "link2"}
+	]
+	
+	contact = { email = "jakub.kuzilek@cvut.cz", phone = "+420-22435-4155", location = "CVUT Prague", schedule = "Monday to Friday 9:00 to 16:00, email for appointment", coordinates = [10, 50] }
+	
+	googleMapsAPIKey="AIzaSyDfy5EhePKV9pvK4Lvo-AMdOu83TjaKlnU"

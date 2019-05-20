@@ -1,0 +1,7 @@
+<div id="proposal" class="main_section proposal">
+	{{ $proposal := .Site.Params.proposal }}
+	<h2>{{ $proposal.title }}</h2>
+	<p>{{ $proposal.description }}</p>
+	<p>{{ $proposal.source }}</p>
+	<p><a href={{ $proposal.pdflink }} target="_blank">Download research proposal</a></p>
+</div>

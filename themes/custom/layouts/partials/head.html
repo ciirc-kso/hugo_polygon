@@ -1,0 +1,117 @@
+<head>
+<style>
+html, body {
+	height: 100%;
+}
+
+#header {
+	text-align: center;
+	height: 75px;
+	padding:1px;   
+	text-transform:capitalize;
+	background-color:#42a5f5;
+	color:white;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+#content {
+	padding:0px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.main_section {
+	color: black; 
+	height: 300px;
+	background-color:grey;
+	bottom:0px;
+	text-align:center;
+	width:100%;
+	display:block;
+	float:left;
+}
+
+.main_section + .proposal {
+	background-color:red;
+}
+
+.main_section + .about {
+	background-color:red;
+}
+
+.main_section + .contact {
+	background-color:green;
+}
+
+.main_section + .team {
+	background-color:yellow;
+}
+
+.member_card {
+	display: inline;
+	float: left;
+	margin-top: 100px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.publication_entry {
+	display: inline;
+	float: left;
+	margin-top: 100px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.main_section + .publication {
+	background-color:purple;
+}
+
+.main_section p {
+	margin:0px;
+	height: calc(100% - (100px + 150px))
+}
+
+.main_section a {
+	color: black;
+}
+
+#footer {
+	position:fixed;
+	color: white;
+	height:35px;
+	background-color:#757575;
+	bottom:0px; 
+	text-align:center; 
+	width:99%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+</style>
+</head>
