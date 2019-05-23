@@ -1,13 +1,20 @@
-<div id="header">
-     <h1 style="margin-bottom:-10px; "><a style="text-decoration: none; color:white;"href="/"> Template - {{.Kind}}</a></h1>
-</div>
-<div id="navbar" class="topnav">
-	<a href="{{.URL}}#about">About</a>
-	<a href="{{.URL}}#proposal">Proposal</a>
-	<a href="{{.URL}}#publication">Publications</a>
-	<a href="{{.URL}}#team">Team</a>
-	<a href="{{.URL}}#contact">Contact</a>
-</div>
+{{ $sections := .Site.Params.sections }}
+<!--<div id="navbar" class="topnav">-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">{{ .Site.Title }}</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav">
+		{{ range $sections }}
+			<li class="nav-item">
+				<a class="nav-link" href="{{ .URL }}#{{ index . "label" }}">{{ index . "label" }}</a>
+			</li>
+		{{ end }}
+		</ul>
+	</div>
+</nav>
 <script>
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};

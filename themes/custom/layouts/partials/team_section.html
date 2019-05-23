@@ -1,10 +1,12 @@
-<div id="team" class="main_section team">	
+<div id="{{ index . "label"}}" class="container-fluid">
 	{{ $people := index . "people" }}
+	<div class="row">
 	{{ range $people }}
-	<p style="display:inline;float:left;margin-right:30px">
+		<div class="col-sm bg-light">
 		{{ .name }}<br/>
 		{{ .position }}<br/>
-		<img src="{{ .avatar }}" height="100" width="100"/>
-	</p>
+		<img class="img-rounded" src="{{ .avatar }}" height="200" width="200"/>
+		</div>
 	{{ end }}
+	</div>
 </div>

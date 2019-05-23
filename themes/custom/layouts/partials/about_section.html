@@ -1,10 +1,12 @@
-<div id="about" class="main_section about">
-	<h2>{{ index . "title" }}</h2>
-	<p>{{ index . "description" }}</p>
-	<ul>
-		{{ $keywords := index . "keywords" }}
-		{{ range $keywords }}
-		<li>{{ . }}</li>
-		{{ end }}
-	</ul>
+<div id="{{ index . "label" }}" class="container-fluid">
+	<div class="row">
+		<h2>{{ index . "title" }}</h2>
+		<p class="text-center">{{ index . "description" }}</p>
+			<ul>
+				{{ $keywords := index . "keywords" }}
+				{{ range $keywords }}
+				<li>{{ . }}</li>
+				{{ end }}
+			</ul>
+	</div>
 </div>

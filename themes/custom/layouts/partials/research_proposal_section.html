@@ -1,5 +1,7 @@
-<div id="proposal" class="main_section proposal">
+<div id="{{ index . "label"}}" class="container-fluid" style="background-image:url(images/background.jpg)">
 	<h2>{{ index . "title" }}</h2>
 	<p>{{ index . "description" }}</p>
-	<p><a href="" target="_blank">{{ index . "source" }}</a></p>
+	<button type="button" class="btn btn-secondary btn-lg custom-btn">
+		<a href={{ index . "source"}}><i class="fa fa-download"></i>Download research proposal</a>
+	</button>
 </div>

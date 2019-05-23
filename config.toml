@@ -1,24 +1,68 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "custom"
+title = "Student Analyse"
+theme = "hugo-academic-master"
 
 [params]
+	# sections is a container for your single page website structure, it's data and metadata.
+	# Declaration of a section will be described lower, it should be mentioned that sections will appear the website in the same order they are declared.
+	# Each section is basically a map of key-value pairs. Some of them are used by every section, other are meant for a specific type of section.
+	# Here goes list of possible values, the ones used by all sections are marked with *
+	# *label - name of the button in navigation bar, allows quick travel to the named section
+	# *type - the value defines which section will be rendered on the page. Each type has it's own parameters.
+	# 	allowed values: proposal, about, team, publications, contact_info
+	# Typical declaration of a contact info section in .toml hugo configuration file: { label = "info", type = "contact_info"}
+	# 	after that a section will appear on your website, but since there is no data for it, it would be empty.
+	# That entry (which is a map) should be placed in "sections" array.
+	# sections = [
+	#	{ ...key-value pairs for a specific type...},
+	#	{ ... },
+	#	{ ... }
+	# ]
+	# Here comes list of fields for specific types of section. Delimeted by ":" goes type of value it accepts.
+	# proposal: 
+	# 	title : string
+	#	description : string
+	#	source : URL
+	# about:
+	#	title : string
+	#	description : string
+	#	keywords : array of strings (example - ["Static", "Site", "Generator"]
+	# team:
+	#	people: map with following structure:
+	#		name : string
+	#		position : string
+	#		avatar : path to file in your "<hugo site folder>/static" folder
+	# publications :
+	#	entries : map with following structure:
+	#		author : string
+	#		email : string
+	#		ref : URL
+	# contact_info:
+	#	email : string
+	#	phone : string
+	#	location : string
+	#	schedule : string
+	#	coordinates : array of two value, which are coordinates for google map api
+	chosen_css = "main.css"
+	
+	#TODO customizable theme
 	sections = [
-		{ type = "proposal", title = "Test proposal", description = "Generic proposal", source = "Book ref" },
-		{ type = "about", title = "About the project", description = "Lorem ipsum bla blas", keywords = ["A", "B", "C"] },
-		{ type = "team", people = [
+	#TODO different css for each section
+		{ label = "Research proposal", type = "proposal", title = "Student Analyse: Predictive modeling of student performance using learning resources ", description = "“Essentially, it is in our hands to make constructive and effective use of the data around us to provide useful and significant insights into learning and teaching.”[The Potential of Learning Analytics and Big Data. (Charlton, Mavrikis, and Katsifli 2013)]", source = "Book ref" },
+		{ label = "About", type = "about", title = "About the project", description = "Lorem ipsum bla blas", keywords = ["A", "B", "C"] },
+		{ label = "Our team", type = "team", people = [
 			{ name = "Jakub Kuzilek", position = "junior researcher", avatar = "images/jakub_kuzilek_avatar.png" },
  			{ name = "Jonas Vaclavek", position = "junior researcher", avatar = "images/jonas_vaclavek_avatar.jpeg" },
 			{ name = "Viktor Fuglik", position = "junior researcher", avatar = "images/viktor_fuglik_avatar.jpg" }
 		] },
-		{ type = "publications", entries = [
+		{ label = "Publications", type = "publications", entries = [
 			{author = "Jakub Kuzilek", email = "jakub.kuzilek@cvut.cz", ref = "link1"},
 			{author = "Jonas Vaclavek", email = "jonas.vaclavek@cvut.cz", ref = "link2"}
 		] },
-		{ type = "contact_info", email = "jakub.kuzilek@cvut.cz", phone = "1231234234", location = "Prague", schedule ="always open", coordinates = [10, 50]},
-		#{ type = "proposal", title = "Another proposal", description = "Unexpected proposal", source = "Another book ref" },
-		#{ type = "about", title = "About other projects", description = "asdasdashdbiuasbdoasjndoajsnbdoausnd", keywords = ["steel","ball","race"] }
+		{ label = "Contact", type = "contact_info", email = "jakub.kuzilek@cvut.cz", phone = "1231234234", location = "Prague", schedule ="always open", coordinates = [10, 50]}
+		#{ label = "Another proposal", type = "proposal", title = "Another proposal", description = "Unexpected proposal", source = "Another book ref" },
+		#{ label = "Another about", type = "about", title = "About other projects", description = "asdasdashdbiuasbdoasjndoajsnbdoausnd", keywords = ["steel","ball","race"] }
 		
 	]
 	
